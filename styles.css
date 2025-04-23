@@ -1,0 +1,273 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header Section */
+  header {
+    background: linear-gradient(135deg, #ff5f6d, #ffc3a0);
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  header h1 {
+    font-size: 3em;
+    color: white;
+  }
+  
+  .header-content {
+    padding: 20px;
+  }
+  
+  /* Navbar */
+  nav {
+    background-color: #333;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  
+  nav ul li {
+    margin: 0 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+  }
+  
+  nav ul li a:hover {
+    background-color: #575757;
+  }
+  
+  /* Main Content */
+  main {
+    flex: 1;
+    padding: 60px 30px;
+  }
+  
+  /* Home Content */
+  .main-content {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .main-content h2 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+  }
+  
+  .main-content p {
+    font-size: 1.25em;
+    margin-bottom: 30px;
+  }
+  
+  .cta-btn {
+    font-size: 1.1em;
+    color: white;
+    background-color: #ff5f6d;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    background-color: #ffc3a0;
+  }
+  
+  /* About Page */
+  .about-content,
+  .campaign-content,
+  .contact-content {
+    background-color: #fff;
+    text-align: center;
+    padding: 60px 30px;
+  }
+  
+  .about-content h2,
+  .campaign-content h2,
+  .contact-content h2 {
+    font-size: 2.8em;
+    margin-bottom: 25px;
+  }
+  
+  .about-content p,
+  .campaign-content p,
+  .contact-content p {
+    font-size: 1.25em;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto 20px;
+  }
+  
+  /* Contact Form */
+  .contact-content form {
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  .contact-content input,
+  .contact-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-content button {
+    background-color: #ff5f6d;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+  }
+  
+  .contact-content button:hover {
+    background-color: #ffc3a0;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+  }
+  
+  footer p {
+    font-size: 1em;
+  }
+  
+  /* Dark Mode */
+  .dark-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s;
+  }
+  
+  .dark-toggle:hover {
+    background-color: #666;
+  }
+  
+  body.dark {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+  body.dark header {
+    background: linear-gradient(135deg, #4e5b8e, #6f7bb3);
+  }
+  
+  body.dark nav,
+  body.dark footer {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+  }
+  
+  body.dark .cta-btn {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  body.dark .about-content,
+  body.dark .campaign-content,
+  body.dark .contact-content,
+  body.dark .main-content {
+    background-color: #1e1e1e;
+  }
+  
+  body.dark input,
+  body.dark textarea {
+    background-color: #2e2e2e;
+    color: white;
+    border: 1px solid #666;
+  }
+  
+  body.dark .contact-content button {
+    background-color: #ff5f6d;
+  }
+  
+  body.dark .contact-content button:hover {
+    background-color: #ffc3a0;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-content p {
+    margin: 0;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .social-icon {
+    text-decoration: none;
+    font-size: 30px;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #00aced; /* Change to a color that suits your theme */
+  }
+  
+  .social-icon.facebook:hover {
+    color: #3b5998;
+  }
+  
+  .social-icon.twitter:hover {
+    color: #1da1f2;
+  }
+  
+  .social-icon.linkedin:hover {
+    color: #0077b5;
+  }
+  
+  .social-icon.instagram:hover {
+    color: #e4405f;
+  }
+  

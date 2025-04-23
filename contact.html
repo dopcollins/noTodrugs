@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Say No to Drugs</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Say No to Drugs</h1>
+    <button id="toggleDark" class="dark-toggle">🌙 Dark Mode</button>
+
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="campaign.html">Campaign</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="contact-content">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or want to get involved, feel free to reach out.</p>
+    <form action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <textarea name="message" id="message" rows="5" placeholder="Your message..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Say No to Drugs Campaign</p>
+    <footer>
+        <div class="footer-content">
+          <p>Follow me on:</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/yourprofile" target="_blank" class="social-icon facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com/yourprofile" target="_blank" class="social-icon twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="social-icon linkedin">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank" class="social-icon instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
+  <script>
+    window.addEventListener("load", () => {
+      const toggle = document.getElementById("toggleDark");
+      const body = document.body;
+  
+      if (localStorage.getItem("dark-mode") === "enabled") {
+        body.classList.add("dark");
+        toggle.innerText = "☀️";
+      } else {
+        toggle.innerText = "🌙";
+      }
+  
+      toggle.addEventListener("click", () => {
+        body.classList.toggle("dark");
+        const isDark = body.classList.contains("dark");
+        toggle.innerText = isDark ? "☀️" : "🌙";
+        localStorage.setItem("dark-mode", isDark ? "enabled" : "disabled");
+      });
+    });
+  </script>
+  
+  <script src="script.js"></script>
+  
+</body>
+</html>
