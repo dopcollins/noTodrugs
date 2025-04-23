@@ -6,6 +6,8 @@
   <title>Campaign - Say No to Drugs</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body>
   <header>
@@ -28,6 +30,47 @@
     <p>Join our movement to raise awareness about the harmful effects of drug abuse and create a drug-free society.</p>
     <a href="contact.html" class="cta-btn">Join the Campaign</a>
   </section>
+
+  <section class="campaigns">
+    <h2>Our Campaigns</h2>
+    <p>Campaigns conducted throughout the years.</p>
+    
+    <!-- Chart container -->
+    <div class="chart-container">
+      <canvas id="campaignChart"></canvas>
+    </div>
+  </section>
+
+  <script>
+    // Wait for the window to load before running the script
+    window.addEventListener("load", () => {
+      const ctx = document.getElementById('campaignChart').getContext('2d');
+  
+      // Creating the bar chart
+      const campaignChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['2019', '2020', '2021', '2022', '2023'],  // Years
+          datasets: [{
+            label: 'Number of Campaigns',
+            data: [5, 8, 12, 15, 20],  // Data for the number of campaigns in each year
+            backgroundColor: 'rgba(54, 162, 235, 0.6)',  // Bar color
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true  // Start Y-axis from 0
+            }
+          }
+        }
+      });
+    });
+  </script>
+  
 
   <footer>
     <p>&copy; 2025 Say No to Drugs Campaign</p>

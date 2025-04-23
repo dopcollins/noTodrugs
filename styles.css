@@ -271,3 +271,86 @@
     color: #e4405f;
   }
   
+
+  .testimonials {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .testimonials h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  
+  .testimonial-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .testimonial-card {
+    width: 250px;
+    height: 250px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .testimonial-card p {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .testimonial-cards {
+      gap: 15px;
+    }
+  
+    .testimonial-card {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .testimonial-cards {
+      gap: 10px;
+    }
+  
+    .testimonial-card {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  
+  .campaigns {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .campaigns h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  
+  .chart-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  canvas {
+    width: 100% !important;  /* Ensure full width */
+    height: 400px;  /* Set the height of the chart */
+  }
+  
